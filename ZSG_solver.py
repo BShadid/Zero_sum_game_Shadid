@@ -139,7 +139,7 @@ def prompt2():
     if response == "no":
         permission = True
         while (permission):
-            t = raw_input("Which part is incorrect? (game, ruth, charlie").lower()
+            t = raw_input("Which part is incorrect? (game, ruth, charlie) ").lower()
             if t == "ruth":
                 set_ruth_values()
                 permission = False
