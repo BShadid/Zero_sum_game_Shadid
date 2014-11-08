@@ -106,12 +106,15 @@ def set_charlie_values():
                         row_replace_char_raw = raw_input("What row would you like to replace? ")
                         try:
                             row_replace_char = int(row_replace_char_raw)
-                            total_charlie_strategy -= lst_charlie[row_replace_char - 1]
-                            lst_charlie[row_replace_char - 1] = replacement_float_char
-                            total_charlie_strategy += replacement_float_char 
-                            replacement_column_edit = False
-                            value_add_char = False
-                            set_charlie_values()
+                            if row_replace_char < 0 or row_replace_car > y:
+                                print "Oops! Index out of range"
+                            else:
+                                total_charlie_strategy -= lst_charlie[row_replace_char - 1]
+                                lst_charlie[row_replace_char - 1] = replacement_float_char
+                                total_charlie_strategy += replacement_float_char 
+                                replacement_column_edit = False
+                                value_add_char = False
+                                set_charlie_values()
                         except:
                             print "Oops! Something went wrong. Please try again."
             except:
