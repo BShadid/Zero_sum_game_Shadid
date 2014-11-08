@@ -193,9 +193,6 @@ def prompt1():
     elif yup != "yes" or "no":
         print "Please input either 'yes' or 'no'."
         prompt1()
-    else:
-        print_game(game)
-        print "Done"
 
 expected_payout_ruth = 0
 def calculate_expected_payout():
@@ -208,31 +205,9 @@ def calculate_expected_payout():
     print " "
     print "Expected payout for Ruth: ", expected_payout_ruth
     print " "
+    completion_state()
 
-def print_changelog():
-    print "0.1.4"
-    print "'calculate_expected_payout()' works for any m * n game"
-    print " "
-    print "0.1.3"
-    print "Reworked set_ruth_values() and set_charlie_values() to include global variables, lst_ruth and lst_charlie"
-    print "Added 'calculate_expected_payout()' as the default function after assigning list values for ruth and charlie"
-    print " "
-    print "0.1.2"
-    print "Removed list assignments method from classes.py and placed them in ZSG_solver.py"
-    print "Repaired list assignments function to be Griff-proof"
-    print "Renamed replacement(x, y, z) to replacement(t, u, k)"
-    print " "
-    print "0.1.1"
-    print "Added classes.py with a class, Zerosumgame, to find the payoff, minimax, and maximin of the game"
-    print "Added while loops to each function in ZSG_solver.py with 'try' and 'except' components"
-    print " "
-    print "0.1.0"
-    print "Added replacement(x, y, z) function"
-    print " "
-    print "0.0.2"
-    print "Added print_game(game) function"
-    print " "
-    print "0.0.1"
-    print "Implemented ability to make the 'game' into an m * n board by making a list of lists and joining each element of the lists with " " by treating each one as a string"
+def completion_state():
+    print "Done"
 
 prompt1()
