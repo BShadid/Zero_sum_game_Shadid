@@ -192,7 +192,6 @@ def prompt1():
 
     elif yup == "no":
         set_ruth_values()
-        set_charlie_values()
     elif yup != "yes" or "no":
         print "Please input either 'yes' or 'no'."
         prompt1()
