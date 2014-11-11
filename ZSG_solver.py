@@ -21,7 +21,7 @@ while (nothing):
         print "One or more of your values is not a positive integer. Please try again."
 
 for i in range(0,x):
-    game.append(["0"] * y) 
+    game.append(["0"] * y)
 
 def print_game(game):
     for i in game:
@@ -103,15 +103,13 @@ def set_charlie_values():
                 else:
                     replacement_column_edit = True
                     while (replacement_column_edit):
-                        row_replace_char_raw = raw_input("What row would you like to replace? ")
+                        row_replace_char_raw = raw_input("What column would you like to replace? ")
                         try:
                             row_replace_char = int(row_replace_char_raw)
-                            if row_replace_char < 0 or row_replace_car > y:
+                            if (row_replace_char < 0) or (row_replace_char > y):
                                 print "Oops! Index out of range"
-                            else:
-                                total_charlie_strategy -= lst_charlie[row_replace_char - 1]
-                                lst_charlie[row_replace_char - 1] = replacement_float_char
-                                total_charlie_strategy += replacement_float_char 
+                            else:                              
+                                lst_charlie[(row_replace_char - 1)] = replacement_float_char
                                 replacement_column_edit = False
                                 value_add_char = False
                                 set_charlie_values()
